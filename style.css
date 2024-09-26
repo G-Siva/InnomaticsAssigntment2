@@ -1,0 +1,144 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:antiquewhite;
+    margin:0;
+    padding:70px;
+}
+
+.registrationForm h2{
+    margin-bottom:30px;
+    text-align: center;
+    
+}
+
+.registrationForm {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="department"],
+input[type="Employee ID"],
+input[type="Profile Picture URL"]{
+      width:100%;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+}
+
+input[type="submit"]{
+    width:100%;
+    background-color: black;
+    color:#fff;
+    padding: 12px;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color:#ccc;
+}
+
+.head h1{
+    text-align: center;
+    padding-left: 20%; 
+}
+
+.registrationForm, .details_container {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+
+    td img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.map-container {
+    width: 80%;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+iframe {
+    display: block;
+    border: none;
+}
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INNOMATICS PORTAL</title>
+        <link rel="stylesheet" href="style.css">
+        <h1>
+            Innomatics Directory Portal
+        </h1>
+    </head>
+<body>
+    <div class="registrationForm">
+        <h2>
+            Employee Registration Form
+        </h2>
+        <form action="registration_from.php" method="post" id="regiform">
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your First Name.." required>
+       
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email.." required>
+        
+            <label for="dept">Department</label>
+            <input type="Department" id="dept" name="department"  required>
+        
+            <label for="EId">Employee ID</label>
+            <input type="Employee ID" id="EId" name="employeeid"  required>
+            
+            <label for="PPUrl">Profile Picture URL</label>
+            <input type="Profile Picture URL" id="PPUrl" name="profileurl"  required>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <div class="details_container" id=detailsContainer>
+        <h2>Employee List</h2>
+        <p><strong>Name:</strong> <span id="displayname"> </span></p>
+        <p><strong>Email:</strong> <span id="displayemail"> </span></p>
+    </div>
+
+    <script>
+        document.getElementById('regiform').addEventListener('submit', function(event){
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const firstName = document.getElementById('fname').value;
+            const email = document.getElementById('email').value;
+            const department = document.getElementById('department').value;
+            const employeeid = document.getElementById('empolyeeid').value;
+            const PPUrl = document.getElementById('PPUrl').value;
+
+            // Display the details
+            document.getElementById('displayName').innerText = firstName + " " ;
+            document.getElementById('displayEmail').innerText = email;
+
+            // Hide the form and show the details container
+            document.getElementById('registrationForm').classList.add('hidden');
+            document.getElementById('detailsContainer').classList.remove('hidden');
+        });
+    </script>
+
+<table class="employee-table">
+    <thead>
+        <tr>
+            <th>Profile Picture</th>
+            <th>Name</th>
+            <th>Employee ID</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+<tbody>
+        <tr>
+            <td><img src="https://via.placeholder.com/100" alt="John Wick"></td>
+            <td>John Wick</td>
+            <td>001</td>
+            <td>IT</td>
+        </tr>
+        <tr>
+            <td><img src="https://via.placeholder.com/100" alt="Miles Morales"></td>
+            <td>Miles Morales</td>
+            <td>002</td>
+            <td>Management</td>
+        </tr>
+        <tr>
+            <td><img src="https://via.placeholder.com/100" alt="Victor Doom"></td>
+            <td>Victor Doom</td>
+            <td>003</td>
+            <td>Design</td>
+        </tr>
+        <tr>
+            <td><img src="https://via.placeholder.com/100" alt="Steve Rogers"></td>
+            <td>Steve Rogers</td>
+            <td>004</td>
+            <td>HR</td>
+        </tr>
+</tbody>
+</table>
+
+<div class="map-container">
+    <h1>Our Location</h1>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.853039531665!2d76.96131259202956!3d11.02262011823958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85850e65415c5%3A0x6f9e3b7ce03d8c91!2sOmni%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1727368612298!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+        
+</body>
+</html>
